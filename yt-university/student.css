@@ -1,0 +1,88 @@
+:root {
+  /* Light mode colors */
+  --primary-color: #007bff;
+  --accent-color: #374151;
+  --bg-prim-color: #f8f9fa;
+  --bg-accent-color: #374151;
+  --text-color: #212529;
+
+  /* Fonts */
+  --font-body: Inter, "sans-serif";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors */
+    --primary-color: #007bff;
+    --accent-color: #374151;
+    --bg-prim-color: #111827;
+    --bg-accent-color: #1f2937;
+    --text-color: #8fa3af;
+  }
+}
+
+@media (max-width: 750px) {
+  * {
+    font-size: small !important;
+  }
+}
+
+body {
+  background-color: var(--bg-prim-color);
+  font-family: var(--font-body);
+}
+
+.card {
+  border: none;
+  background-color: var(--bg-accent-color);
+  padding: 1rem 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tr-head {
+  background-color: var(--accent-color);
+  font-size: medium;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.search {
+  padding: 0.4rem 1rem;
+  border: none;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+.search:focus {
+  outline: 1px solid var(--primary-color);
+  color: white;
+}
+/* Student view */
+
+.form-control {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+}
+/* Utility classes */
+.text-white {
+  color: white;
+}
+
+.text-gray {
+  color: var(--text-color) !important;
+}
